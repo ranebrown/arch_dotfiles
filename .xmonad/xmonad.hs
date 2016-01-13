@@ -1,5 +1,5 @@
 --imports
-import XMonad
+import XMonad hiding((|||))
 
 --used for xmobar, DynamicLog contains status information
 import XMonad.Hooks.DynamicLog
@@ -28,9 +28,9 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.Accordion
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.Grid
-import XMonad.Layout.ToggleLayouts --switch to a specific layout
+import XMonad.Layout.LayoutCombinators -- switch to a specific layout
 
---something to do with exiting correctly?
+--correctly exit xserver
 import System.Exit
 
 --used for custom key/mouse  bindings (don't have to use xK_b format)
@@ -84,7 +84,7 @@ xmobarCurrentWorkspaceColor = "#CEFFAC" --current workspace color
 	--run xmonad --recompile from command line to view errors
 	--each layout seperated by |||
 	--after recompile with mod-q need to press mod-shift-space to reload layout
-myLayoutHook = 	toggleLayouts(Full) $ avoidStruts $ windowNavigation $ smartBorders  --struts have to do with spacing between menu bar 
+myLayoutHook = 	avoidStruts $ windowNavigation $ smartBorders  --struts have to do with spacing between menu bar 
 	(
 		Tall 1 (3/100) (1/2) |||  --- args: num panes in master pane, size inc/dec %, initial size of master pan 
 		Full ||| -- fullscreen
@@ -144,9 +144,7 @@ myKeys =
                 ,("M-<R>", sendMessage $ Go R)
                 ,("M-<U>", sendMessage $ Go U)
                 ,("M-<D>", sendMessage $ Go D)
-		--layout toggling, for a toggle to a specific layout need to add it to toggleLayouts() under myLayout
-		,("M-<space>", sendMessage NextLayout)
-		,("M-f", sendMessage (Toggle "Full"))
+		,("M-f", sendMessage $ JumpToLayout "Full") --switch to a specific layout, must use layout name displayed in status bar
 	]
 
 --custom mouse bindings
