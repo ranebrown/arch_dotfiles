@@ -27,10 +27,10 @@ Config
 				Run Com "/bin/bash" ["-c", "~/.xmobar_bin/volume.sh"] "vol" 1
 				
 				-- custom command for wifi
-				,Run Com "/bin/bash" ["-c", "~/.xmobar_bin/wifi.sh"] "wifi" 500
+				,Run Com "/bin/bash" ["-c", "~/.xmobar_bin/wifi.sh"] "wifi" 50
 				
 				-- custom command for battery
-				,Run Com "/bin/bash" ["-c", "~/.xmobar_bin/batt.sh"] "batt" 500
+				,Run Com "/bin/bash" ["-c", "~/.xmobar_bin/batt.sh"] "batt" 50
 
 				--font from PP (pretty printer) in xmonad.hs
 				,Run StdinReader
