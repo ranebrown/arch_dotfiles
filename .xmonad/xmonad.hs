@@ -28,6 +28,7 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.Accordion
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.Grid
+import XMonad.Layout.ToggleLayouts --switch to a specific layout
 
 --something to do with exiting correctly?
 import System.Exit
@@ -83,7 +84,7 @@ xmobarCurrentWorkspaceColor = "#CEFFAC" --current workspace color
 	--run xmonad --recompile from command line to view errors
 	--each layout seperated by |||
 	--after recompile with mod-q need to press mod-shift-space to reload layout
-myLayoutHook = 	avoidStruts $ windowNavigation $ smartBorders  --struts have to do with spacing between menu bar 
+myLayoutHook = 	toggleLayouts(Full) $ avoidStruts $ windowNavigation $ smartBorders  --struts have to do with spacing between menu bar 
 	(
 		Tall 1 (3/100) (1/2) |||  --- args: num panes in master pane, size inc/dec %, initial size of master pan 
 		Full ||| -- fullscreen
@@ -136,13 +137,16 @@ myModMask = mod4Mask --set windows key as the mod key
 myKeys =
 	[
 		("M-w", kill)	-- close focused window
-	--	,("M-x", io (exitWith ExitSuccess))  -- Quit xmonad
+		,("M-<space>-q", io (exitWith ExitSuccess))  -- Quit xmonad
 		,("M-u", focusUrgent) -- switch to urgent window
 		--navigate through open panes with mod-arrowkeys
 		,("M-<L>", sendMessage $ Go L)
                 ,("M-<R>", sendMessage $ Go R)
                 ,("M-<U>", sendMessage $ Go U)
                 ,("M-<D>", sendMessage $ Go D)
+		--layout toggling, for a toggle to a specific layout need to add it to toggleLayouts() under myLayout
+		,("M-<space>", sendMessage NextLayout)
+		,("M-f", sendMessage (Toggle "Full"))
 	]
 
 --custom mouse bindings
