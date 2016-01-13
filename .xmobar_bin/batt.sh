@@ -7,7 +7,7 @@ left=`acpi | awk '{print $4}' | cut -d "," -f 1`
 if [ $ac == 'Full' ]
 then 
 	echo $ac
-elif [ $ac == 'Charged' ]
+elif [ $ac == 'Charging' ]
 then
 	echo $ac
 else
