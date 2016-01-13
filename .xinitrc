@@ -42,7 +42,7 @@ xbindkeys
 xcalib ~/colorprofiles/mac_colors.icc
 
 # set initial backlight and keyboard light
-xbacklight -set 50
+xbacklight -set 40
 kbdlight set 20
 
 #case statement for different window managers, default is xmonad
