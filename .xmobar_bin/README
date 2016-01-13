@@ -1,0 +1,5 @@
+All bash scripts for use with xmobar
+
+Edit .xmobarrc to call these scripts
+
+
