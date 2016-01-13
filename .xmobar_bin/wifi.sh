@@ -8,8 +8,8 @@
 #  exit 0
 #}
 
-ssid=`iw dev wlp2s0 link | awk -F SSID: '{print $2}'`
-strength=`iw dev wlp2s0 link | awk -F signal: '{print $2}' | cut -c3-5`
+ssid=`sudo iw dev wlp2s0 link | awk -F SSID: '{print $2}'`
+strength=`sudo iw dev wlp2s0 link | awk -F signal: '{print $2}' | cut -c3-5`
 
 bars=`expr $strength / 10`
 
