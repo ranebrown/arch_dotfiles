@@ -18,7 +18,7 @@ Config
    		--, pickBroadest =     False   -- choose widest display (multi-monitor)
    		, persistent =       True    -- enable/disable hiding (True = disabled)
 
-		,template = "%StdinReader%}{%date%    Vol: <fc=#2aa198>%vol%</fc>    %battery% "
+		,template = "%StdinReader%}{%date%    %wifi%     Vol: <fc=#2aa198>%vol%</fc>    %battery% "
 
    		   -- plugins
    		--   Numbers can be automatically colored according to their value. xmobar
@@ -38,6 +38,8 @@ Config
 			[	
 				-- custom command
 				Run Com "/bin/bash" ["-c", "~/.xmobar_bin/volume.sh"] "vol" 1
+			
+				,Run Com "/bin/bash" ["-c", "~/.xmobar_bin/wifi.sh"] "wifi" 5000
 
 				,Run StdinReader
 
@@ -79,22 +81,22 @@ Config
 				, Run Battery [ "--template" , "Batt: <acstatus>"
                              			, "--Low"      , "10"        -- units: %
                             			 , "--High"     , "80"        -- units: %
-                            			 , "--low"      , "darkred"
-                            			 , "--normal"   , "darkorange"
-                            			 , "--high"     , "darkgreen"
+                            			 , "--low"      , "#dc322f"
+                            			 , "--normal"   , "#cb4b16"
+                            			 , "--high"     , "#859900"
 
                             			 , "--" -- battery specific options
                             			           -- discharging status
                             			           , "-o"	, "<left>%"
                             			           -- AC "on" status
-                            			           , "-O"	, "<fc=#dAA520>Charging</fc>"
+                            			           , "-O"	, "<fc=#859900>AC</fc>"
                             			           -- charged status
-                            			           , "-i"	, "<fc=#006000>Charged</fc>"
+                            			           , "-i"	, "<fc=#859900>AC</fc>"
                             			 ] 50
 
                 			-- time and date indicator 
 				-- https://downloads.haskell.org/~ghc/6.12.1/docs/html/libraries/time-1.1.4/Data-Time-Format.html
-        			,Run Date           "<fc=#93a1a1>%D (%a)    %T</fc>" "date" 10
+        			,Run Date           "<fc=#859900>%D (%a)  %T</fc>" "date" 10
 
         		]
    }
