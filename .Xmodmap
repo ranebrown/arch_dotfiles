@@ -1,0 +1,19 @@
+!Each keysym column in the table corresponds to a particular combination of modifier keys:
+!1.Key
+!2.Shift+Key
+!3.mode_switch+Key
+!4.mode_switch+Shift+Key
+!5.AltGr+Key
+!6.AltGr+Shift+Key
+
+!Not all keysyms have to be set, but to assign only a latter keysym, use the NoSymbol value.
+
+!
+! Swap Caps_Lock and Control_L
+!
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
