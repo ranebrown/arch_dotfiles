@@ -45,6 +45,11 @@ xcalib ~/colorprofiles/mac_colors.icc
 xbacklight -set 40
 kbdlight set 20
 
+# keyboard remappings
+if [ -s ~/.Xmodmap ]; then
+    xmodmap ~/.Xmodmap
+fi
+
 #case statement for different window managers, default is xmonad
 #use xinit windowmanager rather than startx
 session=${1:-xmonad}
@@ -54,11 +59,8 @@ case $session in
 		xsetroot -cursor_name left_ptr
 		#compositing - transparency, alpha channel
 		#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-		#open certain apps
-		thunderbird &
-		firefox &
 		# set background image
-		feh --bg-scale ~/Downloads/ice.jpg
+		feh --bg-scale ~/Pictures/ice.jpg
 		exec xmonad
 		;;
 	gnome )
