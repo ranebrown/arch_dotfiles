@@ -46,7 +46,7 @@ import XMonad.Actions.FlexibleManipulate as Flex
 myTerminal = "urxvt"
 
 --set workspace names and how many
-myWorkspaces = ["1:term","2:web","3:docs","4:mail" ] -- ++ map show [5..8]
+myWorkspaces = ["1:term","2:web","3:docs","4:mail","5:misc"] -- ++ map show [5..8]
 
 --border width in pixels
 myBorderWidth = 2
@@ -112,11 +112,13 @@ tabConfig = defaultTheme {
 	--use: xprop | grep WM_CLASS and then use mouse to click on desired program to get its name
 myManageHook = composeAll 
 	[
-		className =? "sublime_text" --> viewShift "3:docs"
-		-- ,className =? "Thunderbird" --> viewShift "4:mail"
-		-- ,className =? "Firefox" --> viewShift "2:web"
-		,className =? "Firefox" --> doShift "2:web"
-		,className =? "Thunderbird" --> doShift "4:mail"
+		className =? "Subl3" --> viewShift "3:docs"
+		,className =? "Thunderbird" --> viewShift "4:mail"
+		,className =? "Nylas N1" --> viewShift "4:mail"
+		,className =? "google-chrome" --> viewShift "2:web"
+		,className =? "Firefox" --> viewShift "2:web"
+	--	,className =? "Firefox" --> doShift "2:web"
+	--	,className =? "Thunderbird" --> doShift "4:mail"
 		,isFullscreen --> doFullFloat
 		,className =? "processing-app-Base" --> doFloat -- arduino
 	]
