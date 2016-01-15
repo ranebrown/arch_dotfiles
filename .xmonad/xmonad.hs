@@ -42,6 +42,9 @@ import XMonad.Layout.WindowNavigation
 --Dragging and resizing floating windows
 import XMonad.Actions.FlexibleManipulate as Flex
 
+--set the window manager name
+import XMonad.Hooks.SetWMName
+
 --use urxvt terminal emulator
 myTerminal = "urxvt"
 
@@ -49,7 +52,7 @@ myTerminal = "urxvt"
 myWorkspaces = ["1:term","2:web","3:docs","4:mail","5:misc"] -- ++ map show [5..8]
 
 --border width in pixels
-myBorderWidth = 2
+myBorderWidth = 1
 
 --hide/show taskbar
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
@@ -147,6 +150,7 @@ myKeys =
                 ,("M-<U>", sendMessage $ Go U)
                 ,("M-<D>", sendMessage $ Go D)
 		,("M-f", sendMessage $ JumpToLayout "Full") --switch to a specific layout, must use layout name displayed in status bar
+		,("M-p", spawn "dmenu_run ") 
 	]
 
 --custom mouse bindings
@@ -154,6 +158,11 @@ myMouse =
 	[
 		((mod4Mask, button1), (Flex.mouseWindow Flex.discrete)) --drag and resize floating window
 	]
+
+--action to perform when xmonad is started
+--use <+> for additional items, each item in ()
+myStartupHook = 
+	(setWMName "LG3D") -- set workspace name (was needed for matlab)
 
 --structure to hold custom settings
 mySettings = defaultConfig 
@@ -167,6 +176,7 @@ mySettings = defaultConfig
 		,handleEventHook = myEventHook
 		,layoutHook = myLayoutHook
 		,manageHook = myManageHook <+> manageDocks <+> manageHook defaultConfig
+		,startupHook = myStartupHook
 	}
 
 --main
