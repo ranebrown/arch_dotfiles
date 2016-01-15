@@ -1,3 +1,17 @@
+!extensions
+URxvt.perl-ext-common: default,matcher,tabbedex,clipboard
+
+!clickable urls
+URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.matcher.button: 1
+
+!change copy/paste from ctrl-alt-c,v to ctrl-shift-c,v
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+
 URxvt*colorUL:                #859900
 URxvt*colorBD:                #268bd2
 URxvt*color1:                 #dc322f
@@ -41,4 +55,3 @@ URxvt*clipboard.autocopy: true
 URxvt*dynamicColors:                  on
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
-URxvt.perl-ext-common: tabbedex
