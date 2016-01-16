@@ -78,10 +78,10 @@ URxvt*color13:                 S_violet
 URxvt*color14:                 S_base1
 URxvt*color15:                 S_base3
 
-!URxvt*colorUL:                #859900
-!URxvt*colorBD:                #268bd2
-!URxvt*scrollColor:            #657b83
-!URxvt*borderColor:            #002b36
+URxvt*colorUL:                #859900
+URxvt*colorBD:                #268bd2
+URxvt*scrollColor:            #657b83
+URxvt*borderColor:            #002b36
 !fake transparency
 !URxvt.background: [80]#002b36
 !alpha channel is transparency 65535 = ffff -> take %
@@ -97,5 +97,5 @@ URxvt*scrollTtyKeypress:              true
 URxvt.depth: 32
 URxvt*clipboard.autocopy: true
 URxvt*dynamicColors:                  on
-!URxvt.secondaryScreen: 1
-!URxvt.secondaryScroll: 0
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
