@@ -50,6 +50,8 @@ filetype plugin indent on    " required
 syntax enable
 
 "enable colorscheme
+let g:solarized_termcolors=16
+set t_Co=16
 set background=dark
 colorscheme solarized
 

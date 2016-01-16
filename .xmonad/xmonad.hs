@@ -52,7 +52,7 @@ myTerminal = "urxvt"
 myWorkspaces = ["1:term","2:web","3:docs","4:mail","5:misc"] -- ++ map show [5..8]
 
 --border width in pixels
-myBorderWidth = 1
+myBorderWidth = 2
 
 --hide/show taskbar
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)

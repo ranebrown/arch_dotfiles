@@ -21,7 +21,7 @@ alias server='ssh brownsr@eces-shell.colorado.edu'
 # \[ = begin sequence of non-printing characters, \] = end sequence of non-printing characters
 # \[ \] should be used around color codes so prompt appears in correct place
 #export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[1;31m\]>> \[\e[m\]"
-export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[m\]cmd(\[\e[m\]\$(if [[ \$? == 0 ]]; then echo \[\e[32m\]\"\342\234\223\"\[\e[m\]; else echo \[\e[31m\]\"\342\234\227\"\[\e[m\]; fi)\[\e[m\])\[\e[m\]\[\e[m\] \[\e[1;31m\]>> \[\e[m\]"
+export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[m\]cmd(\[\e[m\]\$(if [[ \$? == 0 ]]; then echo \[\e[32m\]\"\342\234\223\"\[\e[m\]; else echo \[\e[31m\]\"\342\234\227\"\[\e[m\]; fi)\[\e[m\])\[\e[m\]\[\e[m\] \[\e[1;31m\]>>\[\e[m\]"
 
 
 alias pyxis='cd /home/rane/Documents/ClassesSprg16/IndependentStudy/pyxis'
@@ -62,3 +62,5 @@ xterm*|rxvt*)
 	;;
 esac
 
+# solarized colors for ls command
+eval `dircolors ~/.dir_colors/dircolors.ansi-dark`

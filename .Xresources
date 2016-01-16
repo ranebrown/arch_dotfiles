@@ -17,6 +17,8 @@ URxvt.clipboard.pastecmd: xsel -ob
 !
 ! http://ethanschoonover.com/solarized
 
+! needed for correct colors
+URxvt.intensityStyles: false
 
 ! Common
 
