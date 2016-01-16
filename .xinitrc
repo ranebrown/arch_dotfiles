@@ -34,11 +34,9 @@ case $session in
 		#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 		# set background image
 		feh --bg-scale ~/Pictures/ice.jpg
-		# turn off red light in headphone jack
-		amixer -D hw:0 set 'IEC958',1 mute > /dev/null &
-		amixer -D hw:0 set 'IEC958',2 mute > /dev/null &
-		amixer -D hw:0 set 'IEC958',16 mute > /dev/null &
 		exec xmonad
+		# turn off red light in headphone jack
+		redLightOff &
 		;;
 	gnome )
 		exec gnome-session
