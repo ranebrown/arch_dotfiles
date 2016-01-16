@@ -21,3 +21,7 @@ alias ..='cd ../..'
 alias ...='cd ../../..' 
 alias ....='cd ../../../..' 
 
+export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/
+
+alias matlabgui='matlab -desktop -nosplash'
+alias matlab='matlab -nodesktop -nosplash'
