@@ -28,6 +28,9 @@ Plugin 'plasticboy/vim-markdown'
 "Auto close braces
 Plugin 'https://github.com/Raimondi/delimitMate.git'
 
+"solarized theme
+Plugin 'https://github.com/altercation/vim-colors-solarized.git'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,6 +48,10 @@ filetype plugin indent on    " required
 
 " enable syntax highlighting
 syntax enable
+
+"enable colorscheme
+set background=dark
+colorscheme solarized
 
 " show status line all the time
 set laststatus=2
