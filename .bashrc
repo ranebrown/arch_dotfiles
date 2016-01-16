@@ -64,3 +64,6 @@ esac
 
 # solarized colors for ls command
 eval `dircolors ~/.dir_colors/dircolors.ansi-dark`
+
+# set system editor to vim
+export EDITOR=/bin/vim
