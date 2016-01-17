@@ -39,7 +39,7 @@ alias matlab='matlab -nodesktop -nosplash'
 # Set titlebar
 case "$TERM" in
 xterm*|rxvt*)
-	PROMPT_COMMAND='echo -ne "\033]0;URxvt: ${USER}@${HOSTNAME}\007"'
+	PROMPT_COMMAND='echo -ne "\033]0;URxvt: ${USER}@${HOSTNAME} ${PWD}\007"'
 	# Show the currently running command in the terminal title:
 	# http://www.davidpashley.com/articles/xterm-titles-with-bash.html
 	show_command_in_title_bar()
