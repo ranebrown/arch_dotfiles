@@ -136,6 +136,9 @@ myEventHook = mconcat
 		,handleEventHook defaultConfig
 	]
 
+--dmenu with yeganesh wrapper for recent history
+myLauncher = "$(yeganesh -x --  -i -fn 'Anonymous P    ro:pixelsize=18' -nb '#002b36' -nf '#839496' -sb '#b58900'     -sf '#002b36')"
+
 --custom keybindings
 --M = mod, S=escape
 myModMask = mod4Mask --set windows key as the mod key
@@ -150,7 +153,7 @@ myKeys =
                 ,("M-<U>", sendMessage $ Go U)
                 ,("M-<D>", sendMessage $ Go D)
 		,("M-f", sendMessage $ JumpToLayout "Full") --switch to a specific layout, must use layout name displayed in status bar
-		,("M-p", spawn "dmenu_run -i -fn 'Anonymous Pro:pixelsize=18' -nb '#002b36' -nf '#839496' -sb '#b58900' -sf '#002b36'") 
+		,("M-p", spawn myLauncher) 
 	]
 
 --custom mouse bindings
