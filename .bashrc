@@ -20,8 +20,10 @@ alias server='ssh brownsr@eces-shell.colorado.edu'
 # \e[m = start background color, can combine a background and text color at beginning -> only need one \e[m at end
 # \[ = begin sequence of non-printing characters, \] = end sequence of non-printing characters
 # \[ \] should be used around color codes so prompt appears in correct place
-#export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[1;31m\]>> \[\e[m\]"
-export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[33m\]\!:\[\e[m\]\[\e[m\]cmd(\[\e[m\]\$(if [[ \$? == 0 ]]; then echo \[\e[32m\]\"\342\234\223\"\[\e[m\]; else echo \[\e[31m\]\"\342\234\227\"\[\e[m\]; fi)\[\e[m\])\[\e[m\]\[\e[m\] \[\e[1;31m\]>>\[\e[m\]"
+export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[33m\]\!:\[\e[m\]\[\e[1;31m\]>> \[\e[m\]"
+
+# below PS1 contains a if statement for a checkmark or x if command is T or F
+#export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[33m\]\!:\[\e[m\]\[\e[m\]cmd(\[\e[m\]\$(if [[ \$? == 0 ]]; then echo \[\e[32m\]\"\342\234\223\"\[\e[m\]; else echo \[\e[31m\]\"\342\234\227\"\[\e[m\]; fi)\[\e[m\])\[\e[m\]\[\e[m\] \[\e[1;31m\]>>\[\e[m\]"
 
 
 alias pyxis='cd /home/rane/Documents/ClassesSprg16/IndependentStudy/pyxis'
@@ -68,4 +70,7 @@ eval `dircolors ~/.dir_colors/dircolors.ansi-dark`
 # set system editor to vim
 export EDITOR="/bin/vim"
 
-
+# ls -l command display in megabytes
+alias lsm="ls -l --block-size=M"
+alias lsa="ls -a"
+alias lsf="ls -F"
