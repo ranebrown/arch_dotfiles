@@ -18,8 +18,8 @@ Config
    		--, pickBroadest =     False   -- choose widest display (multi-monitor)
    		, persistent =       True    -- enable/disable hiding (True = disabled)
 
-		,template = "%StdinReader%}{%date%    %wifi%     Vol: <fc=#2aa198>%vol%</fc>    Batt: <fc=#6c71c4>%batt%</fc> "
-
+		,template = "%StdinReader%}{%date%    %wifi%    Vol: <fc=#2aa198>%vol%</fc>    Batt: <fc=#6c71c4>%batt%</fc> "
+ 
    		 -- see http://projects.haskell.org/xmobar/#system-monitor-plugins.
    		, commands = 
 			[	

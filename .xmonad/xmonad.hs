@@ -49,7 +49,7 @@ import XMonad.Hooks.SetWMName
 myTerminal = "urxvt"
 
 --set workspace names and how many
-myWorkspaces = ["1:term","2:web","3:docs","4:mail","5:misc"] -- ++ map show [5..8]
+myWorkspaces = ["1:term","2:web","3:docs","4:mail","5:dev"] ++ map show [6..8]
 
 --border width in pixels
 myBorderWidth = 2
@@ -64,7 +64,7 @@ myPP = xmobarPP
 	{
 	--	ppTitle = xmobarColor "#657b83" "" . shorten 100 -- title of currently active process, how many chars to use
 		ppCurrent = xmobarColor "#c0c0c0" "" . wrap "<" ">" --how the currently selected window is shown i.e.  <1:term>
-		,ppHiddenNoWindows = xmobarColor "#657b83" "" --show windows with no running app
+	--	,ppHiddenNoWindows = xmobarColor "#657b83" "" --show windows with no running app
 		,ppSep = xmobarColor "#c0c0c0" "" " | " --what charcters seperate one reading from the next
 		,ppUrgent = xmobarColor "#ff69b4" "" --format to be applied to tags of urgent workspaces.
 	--	,ppLayout = const "" -- don't display the current layout i.e. Tall or Full
