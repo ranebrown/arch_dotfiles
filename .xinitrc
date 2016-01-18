@@ -14,7 +14,7 @@ nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCom
 xbindkeys
 
 # use osx color profile
-xcalib ~/colorprofiles/mac_colors.icc
+xcalib ~/.colorprofiles/mac_colors.icc
 
 # set initial backlight and keyboard light
 xbacklight -set 40
