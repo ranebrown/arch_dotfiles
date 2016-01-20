@@ -11,21 +11,16 @@
 ssid=`sudo iw dev wlp2s0 link | awk -F SSID: '{print $2}'`
 strength=`sudo iw dev wlp2s0 link | awk -F signal: '{print $2}' | cut -c3-5`
 
-bars=`expr $strength / 10`
+bars=`expr $strength / 20`
 
 case $bars in
-  10) bar='[----------]' ;;
-  9)  bar='[/---------]' ;;
-  8)  bar='[//--------]' ;;
-  7)  bar='[///-------]' ;;
-  6)  bar='[////------]' ;;
-  5)  bar='[/////-----]' ;;
-  4)  bar='[//////----]' ;;
-  3)  bar='[///////---]' ;;
-  2)  bar='[////////--]' ;;
-  1)  bar='[/////////-]' ;;
-  0)  bar='[//////////]' ;;
-  *)  bar='[----!!----]' ;;
+  0)  bar='[/////]' ;;
+  1)  bar='[////-]' ;;
+  2)  bar='[///--]' ;;
+  3)  bar='[//---]' ;;
+  4)  bar='[/----]' ;;
+  5)  bar='[-----]' ;;
+  *)  bar='[--!--]' ;;
 esac
 
 echo $ssid $bar
