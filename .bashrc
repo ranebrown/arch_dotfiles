@@ -5,9 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
-
 alias clc='clear'
 
 alias server='ssh brownsr@eces-shell.colorado.edu'
@@ -24,7 +21,6 @@ export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[33m\]\!\[\e[m\][\u]\[\e[1;31m\]>> \[\e[
 
 # below PS1 contains a if statement for a checkmark or x if command is T or F
 #export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[33m\]\!:\[\e[m\]\[\e[m\]cmd(\[\e[m\]\$(if [[ \$? == 0 ]]; then echo \[\e[32m\]\"\342\234\223\"\[\e[m\]; else echo \[\e[31m\]\"\342\234\227\"\[\e[m\]; fi)\[\e[m\])\[\e[m\]\[\e[m\] \[\e[1;31m\]>>\[\e[m\]"
-
 
 alias pyxis='cd /home/rane/Documents/ClassesSprg16/IndependentStudy/pyxis'
 
@@ -75,6 +71,7 @@ alias lsm="ls -l --block-size=M"
 alias lsa="ls -a"
 alias lsf="ls -F"
 alias lsl="ls -l"
+alias ls='ls --color=auto'
 
 # Eternal bash history.
 # if bash starts taking long time to load file size is getting too big
@@ -90,3 +87,15 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+alias speed='speedtest-cli'
+
+# display all files begin tracked
+git() {
+	if [[ $@ == "-ls" ]]; then
+		command  git ls-tree -r master --name-only
+	else
+        command git "$@"
+    fi
+}
+
