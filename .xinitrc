@@ -34,6 +34,9 @@ case $session in
 		#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 		# set background image
 		feh --bg-scale ~/Pictures/ice.jpg
+		# start gnome keyring
+		eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+		export SSH_AUTH_SOCK
 		exec xmonad
 		# turn off red light in headphone jack
 		redLightOff &
