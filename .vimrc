@@ -14,6 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 
+" note taking
+Plugin 'https://github.com/xolox/vim-misc.git'
+Plugin 'https://github.com/xolox/vim-notes.git'
+
 " git wrapper
 Plugin 'tpope/vim-fugitive'
 
@@ -97,3 +101,5 @@ nnoremap <C-l> <C-w><Left>
 " expand auto braces
 let delimitMate_expand_cr = 1
 
+" notes directory
+:let g:notes_directories = ['~/Documents/Notes']
