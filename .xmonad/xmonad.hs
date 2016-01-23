@@ -49,7 +49,7 @@ import XMonad.Hooks.SetWMName
 myTerminal = "urxvt"
 
 --set workspace names and how many
-myWorkspaces = ["1:term","2:web","3:docs","4:mail","5:dev"] ++ map show [6..8]
+myWorkspaces = ["1:term","2:dev","3:web","4:docs","5:mail"] ++ map show [6..8]
 
 --border width in pixels
 myBorderWidth = 2
@@ -115,12 +115,12 @@ tabConfig = defaultTheme {
 	--use: xprop | grep WM_CLASS and then use mouse to click on desired program to get its name
 myManageHook = composeAll 
 	[
-		className =? "Subl3" --> viewShift "3:docs"
-		,className =? "Thunderbird" --> viewShift "4:mail"
-		,className =? "Nylas N1" --> viewShift "4:mail"
-		,className =? "google-chrome" --> viewShift "2:web"
-		,className =? "Firefox" --> viewShift "2:web"
-	--	,className =? "Firefox" --> doShift "2:web"
+		className =? "Subl3" --> viewShift "2:dev"
+		,className =? "Thunderbird" --> viewShift "5:mail"
+		,className =? "Nylas N1" --> viewShift "5:mail"
+		,className =? "google-chrome" --> viewShift "3:web"
+		,className =? "Firefox" --> viewShift "3:web"
+	--	,className =? "Firefox" --> doShift "3:web"
 	--	,className =? "Thunderbird" --> doShift "4:mail"
 		,isFullscreen --> doFullFloat
 		,className =? "processing-app-Base" --> doFloat -- arduino
