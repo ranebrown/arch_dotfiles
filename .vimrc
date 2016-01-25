@@ -97,9 +97,17 @@ inoremap <leader>v <esc><C-V>
 "switch between windows
 nnoremap <leader>l <C-w><Right>
 nnoremap <leader>h <C-w><Left>
+nnoremap <leader>k <C-w>k
+nnoremap <leader>j <C-w>j
 
 " expand auto braces
 let delimitMate_expand_cr = 1
 
 " notes directory
 :let g:notes_directories = ['~/Documents/Notes']
+
+" types :help index.txt to view all availabe key mappings
+" increase/decrease vertical window size
+nnoremap <silent> <leader>= :exe "vertical resize +5"<CR>
+nnoremap <silent> <leader>- :exe "vertical resize -5"<CR>
+
