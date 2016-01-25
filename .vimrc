@@ -95,8 +95,8 @@ nnoremap <silent> <leader>v <C-V>
 inoremap <leader>v <esc><C-V>
 
 "switch between windows
-nnoremap <C-r> <C-w><Right>
-nnoremap <C-l> <C-w><Left>
+nnoremap <leader>l <C-w><Right>
+nnoremap <leader>h <C-w><Left>
 
 " expand auto braces
 let delimitMate_expand_cr = 1
