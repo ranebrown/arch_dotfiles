@@ -14,6 +14,12 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 
+" search function
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
+
+" sidebar to view tags
+Plugin 'https://github.com/majutsushi/tagbar.git'
+
 " note taking
 Plugin 'https://github.com/xolox/vim-misc.git'
 Plugin 'https://github.com/xolox/vim-notes.git'
@@ -77,7 +83,6 @@ set splitright
 
 " set default netrw (explore) view style
 let g:netrw_liststyle=3
-nnoremap :E :Vexplore
 
 " change leader key
 let mapleader=","
@@ -111,3 +116,13 @@ let delimitMate_expand_cr = 1
 nnoremap <silent> <leader>= :exe "vertical resize +5"<CR>
 nnoremap <silent> <leader>- :exe "vertical resize -5"<CR>
 
+" toggle tagbar
+nnoremap <silent> <leader>b :TagbarToggle<CR>
+
+" CTRL-P shortcuts
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+nnoremap <leader>m :CtrlPTag<cr>
+
+nnoremap <silent> <leader>1 :Explore<CR>
+nnoremap <silent> <leader>2 :Vexplore<CR>
