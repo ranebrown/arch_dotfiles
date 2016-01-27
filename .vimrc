@@ -126,3 +126,7 @@ nnoremap <leader>m :CtrlPTag<cr>
 
 nnoremap <silent> <leader>1 :Explore<CR>
 nnoremap <silent> <leader>2 :Vexplore<CR>
+
+" change spaces to tabs
+nnoremap <silent> <leader><tab> :%retab!<CR>
+
