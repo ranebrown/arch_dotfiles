@@ -130,3 +130,9 @@ nnoremap <silent> <leader>2 :Vexplore<CR>
 " change spaces to tabs
 nnoremap <silent> <leader><tab> :%retab!<CR>
 
+" Hit enter in the file browser to open the selected
+" file with :vsplit to the right of the browser.
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+
+
