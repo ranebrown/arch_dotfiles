@@ -10,9 +10,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+
+" Status bar
+Plugin 'https://github.com/vim-airline/vim-airline.git'
+
+" Display buffers in status bar
+Plugin 'https://github.com/bling/vim-bufferline.git'
 
 " search function
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
@@ -89,11 +93,8 @@ let mapleader=","
 
 " shortcuts for tabs 
 nnoremap <silent> <leader>t :tabnew<CR>
-inoremap <leader>t <Esc>:tabnew<CR>
 nnoremap <silent> <leader>n :tabnext<CR>
-inoremap <leader>n <esc>:tabnext<CR>
 nnoremap <silent> <leader>p :tabprevious<CR>
-inoremap <leader>p <Esc>:tabprevious<CR>
 
 " Visual block remapping
 nnoremap <silent> <leader>v <C-V>
@@ -136,4 +137,14 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 
 " open a tag in new tab
-:nnoremap <silent> <Leader>F <C-w><C-]><C-w>T
+nnoremap <silent> <Leader>F <C-w><C-]><C-w>T
+
+" theme for airline status bar - must copy theme to
+" ~/.vim/bundle/vim-airline/autoload/airline/themes/
+let g:airline_theme='solarized'
+
+" used to show tabs and spaces using :set list
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+" disable airline whitespace detection
+let g:airline#extensions#whitespace#enabled = 0
