@@ -12,6 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 
+" Code completion
+Plugin 'Valloric/YouCompleteMe'
+
 " Status bar
 Plugin 'https://github.com/vim-airline/vim-airline.git'
 
@@ -148,3 +151,6 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " disable airline whitespace detection
 let g:airline#extensions#whitespace#enabled = 0
+
+" default autocomplete file
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
