@@ -12,6 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 
+" Syntax checker
+Plugin 'https://github.com/scrooloose/syntastic.git'
+
 " Code completion
 Plugin 'Valloric/YouCompleteMe'
 
@@ -155,8 +158,25 @@ let g:airline#extensions#whitespace#enabled = 0
 " default autocomplete file
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
-" use space to navigate backwards through autocomplete list
-let g:ycm_key_list_previous_completion = ['<Space>', '<Up>']
+" set key to navigate backwards through autocomplete list
+let g:ycm_key_list_previous_completion = ['<leader><Tab>', '<Up>']
 
 " don't ask to load .ycm config files
 let g:ycm_confirm_extra_conf = 0
+
+" don't use ycm's syntax checker
+let g:ycm_show_diagnostics_ui = 0
+
+" syntasitc settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0 
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_c_checkers = ["clang_check", "gcc"]
+let g:syntastic_cpp_checkers = ["clang_check", "gcc"]
+
