@@ -159,5 +159,4 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_key_list_previous_completion = ['<Space>', '<Up>']
 
 " don't ask to load .ycm config files
-"let g:ycm_confirm_extra_conf = 0
-let g:ycm_extra_conf_globlist = ['~/Documents/ClassesSprg16/IndependentStudy/pyxis/srb_CnavFilter/*']
+let g:ycm_confirm_extra_conf = 0
