@@ -172,11 +172,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0 
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_c_checkers = ["clang_check", "gcc"]
 let g:syntastic_cpp_checkers = ["clang_check", "gcc"]
+let g:syntastic_clang_check_config_file = '.syntastic_clang_check_config'
+
+" don't echo open buffers to command line
+let g:bufferline_echo = 0
 
