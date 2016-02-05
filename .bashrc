@@ -99,3 +99,9 @@ git() {
     fi
 }
 
+# make dir and move into created dir
+mkcd () {
+	mkdir "$1"
+	cd "$1"
+}
+
