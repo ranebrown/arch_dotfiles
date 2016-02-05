@@ -33,6 +33,8 @@ Plugin 'https://github.com/majutsushi/tagbar.git'
 " note taking
 Plugin 'https://github.com/xolox/vim-misc.git'
 Plugin 'https://github.com/xolox/vim-notes.git'
+" auto update ctags
+Plugin 'https://github.com/xolox/vim-easytags.git'
 
 " git wrapper
 Plugin 'tpope/vim-fugitive'
@@ -107,8 +109,8 @@ nnoremap <silent> <leader>v <C-V>
 inoremap <leader>v <esc><C-V>
 
 "switch between windows
-nnoremap <leader>l <C-w><Right>
-nnoremap <leader>h <C-w><Left>
+nnoremap <leader>l <C-w>l
+nnoremap <leader>h <C-w>h
 nnoremap <leader>k <C-w>k
 nnoremap <leader>j <C-w>j
 
