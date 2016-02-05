@@ -105,3 +105,5 @@ mkcd () {
 	cd "$1"
 }
 
+# automatically start xserver at login
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
