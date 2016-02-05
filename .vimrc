@@ -186,3 +186,5 @@ let g:syntastic_clang_check_config_file = '.syntastic_clang_check_config'
 " don't echo open buffers to command line
 let g:bufferline_echo = 0
 
+" easytags update option
+let g:easytags_async = 1
