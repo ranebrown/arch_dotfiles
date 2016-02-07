@@ -188,3 +188,7 @@ let g:bufferline_echo = 0
 
 " easytags update option
 let g:easytags_async = 1
+
+" save tags file in project dir not as a global file
+set tags=./tags;
+let g:easytags_dynamic_files = 1
