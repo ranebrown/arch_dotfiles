@@ -90,13 +90,13 @@ xmobarCurrentWorkspaceColor = "#CEFFAC" --current workspace color
 myLayoutHook = 	avoidStruts $ windowNavigation $ smartBorders  --struts have to do with spacing between menu bar 
 	(
 		Tall 1 (3/100) (1/2) |||  --- args: num panes in master pane, size inc/dec %, initial size of master pan 
-		Full ||| -- fullscreen
+		-- Full ||| -- fullscreen
 		Grid |||
 		--Accordion ||| -- main pane with others stacked at bottom
 		--noBorders (simpleTabbed) |||
-		noBorders (tabbed shrinkText tabConfig) |||
-		ThreeCol 1 (3/100) (1/2) |||  -- args: num panes in master pane, size inc/dec %, initial size of master pane
-		spiralWithDir North CW  (4/5)  -- args: start dir, spiral dir, ratio of panes in spiral: 0-aspect ratio	
+		noBorders (tabbed shrinkText tabConfig)
+		-- ThreeCol 1 (3/100) (1/2) ||| -- args: num panes in master pane, size inc/dec %, initial size of master pane
+		-- spiralWithDir North CW  (4/5)  -- args: start dir, spiral dir, ratio of panes in spiral: 0-aspect ratio	
 	)
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
@@ -152,7 +152,7 @@ myKeys =
                 ,("M-<R>", sendMessage $ Go R)
                 ,("M-<U>", sendMessage $ Go U)
                 ,("M-<D>", sendMessage $ Go D)
-		,("M-f", sendMessage $ JumpToLayout "Full") --switch to a specific layout, must use layout name displayed in status bar
+		,("M-f", sendMessage $ JumpToLayout "Tabbed Simplest") --switch to a specific layout, must use layout name displayed in status bar
 		,("M-p", spawn myLauncher) 
 	]
 
