@@ -134,7 +134,7 @@ let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>m :CtrlPTag<cr>
 
 nnoremap <silent> <leader>1 :Explore<CR>
-nnoremap <silent> <leader>2 :Vexplore<CR>
+nnoremap <silent> <leader>2 :Lexplore<CR>
 
 " change spaces to tabs
 nnoremap <silent> <leader><tab> :%retab!<CR>
@@ -142,7 +142,8 @@ nnoremap <silent> <leader><tab> :%retab!<CR>
 " Hit enter in the file browser to open the selected
 " file with :vsplit to the right of the browser.
 "let g:netrw_browse_split = 4
-"let g:netrw_altv = 1
+" change from left split to right split
+let g:netrw_altv = 1
 
 " open a tag in new tab
 nnoremap <silent> <Leader>F <C-w><C-]><C-w>T
