@@ -141,8 +141,8 @@ nnoremap <silent> <leader><tab> :%retab!<CR>
 
 " Hit enter in the file browser to open the selected
 " file with :vsplit to the right of the browser.
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
 
 " open a tag in new tab
 nnoremap <silent> <Leader>F <C-w><C-]><C-w>T
