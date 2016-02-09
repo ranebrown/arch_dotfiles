@@ -12,6 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 
+" ctags highlighter
+Plugin 'https://github.com/abudden/taghighlight-automirror.git'
+
 " Syntax checker
 Plugin 'https://github.com/scrooloose/syntastic.git'
 
@@ -193,3 +196,14 @@ let g:easytags_async = 1
 " save tags file in project dir not as a global file
 set tags=./tags;
 let g:easytags_dynamic_files = 1
+
+" the ctags commands to use for easytags
+let g:easytags_languages = {
+\'c': {
+\	'cmd': '/usr/bin/ctags',
+\		'args': ['--fields=+l', '--c-kinds=+p'],
+\       'fileoutput_opt': '-f',
+\       'stdout_opt': '-f-',
+\       'recurse_flag': '-R'
+\   }
+\}
