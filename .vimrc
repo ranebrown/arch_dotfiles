@@ -13,7 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 
 " ctags highlighter
-Plugin 'https://github.com/abudden/taghighlight-automirror.git'
+" currently using easytags built in highlighter
+"Plugin 'https://github.com/abudden/taghighlight-automirror.git'
 
 " Syntax checker
 Plugin 'https://github.com/scrooloose/syntastic.git'
