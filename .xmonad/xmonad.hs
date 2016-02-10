@@ -149,11 +149,13 @@ myKeys =
 		,("M-u", focusUrgent) -- switch to urgent window
 		--navigate through open panes with mod-arrowkeys
 		,("M-<L>", sendMessage $ Go L)
-                ,("M-<R>", sendMessage $ Go R)
-                ,("M-<U>", sendMessage $ Go U)
-                ,("M-<D>", sendMessage $ Go D)
+        ,("M-<R>", sendMessage $ Go R)
+		,("M-<U>", sendMessage $ Go U)
+        ,("M-<D>", sendMessage $ Go D)
 		,("M-f", sendMessage $ JumpToLayout "Tabbed Simplest") --switch to a specific layout, must use layout name displayed in status bar
 		,("M-p", spawn myLauncher) 
+		,("M-k", windows W.focusDown) -- next window
+		,("M-j", windows W.focusUp) -- previous window
 	]
 
 --custom mouse bindings
