@@ -68,7 +68,7 @@ export EDITOR="/bin/vim"
 
 # ls -l command display in megabytes
 alias lsm="ls -l --block-size=M"
-alias lsa="ls -a"
+alias lsa="ls -A"
 alias lsf="ls -F"
 alias lsl="ls -l"
 alias ls='ls --color=auto'
