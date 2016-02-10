@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# from https://www.topbug.net/blog/2012/03/17/generate-ctags-files-for-c-slash-c-plus-plus-source-files-and-all-of-their-included-header-files/
-# ./ctags_with_dep.sh file1.c file2.c ... to generate a tags file for these files.
-
-gcc -M -Iinc/ $* | sed -e 's/[\\ ]/\n/g' | \
-	sed -e '/^$/d' -e '/\.o:[ \t]*$/d' | \
-	ctags -L --append=yes --c-kinds=+p --fields=+liaS --extra=+q
+# extracts header files used for a file and generates the ctags for them
+# $* is used to accept command line arguments i.e. include paths and the file to generate tags for
+# final pipe to awk removes the first line which is a reference to the object file
+# use: ctagsDeps -Ipath/to/header ... file1 file2 ...
+# ctags -L flag reads a list of files if - is used for filename then files are read from stdin
+gcc -M $* | awk '{print $1}' | awk '{if(NR>1)print}' | ctags --append=yes --c-kinds=+p --fields=+liaS --extra=+q -f.tags -L -
