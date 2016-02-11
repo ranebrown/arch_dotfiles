@@ -13,8 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 
 " ctags highlighter
-" currently using easytags built in highlighter
-"Plugin 'https://github.com/abudden/taghighlight-automirror.git'
+Plugin 'https://github.com/abudden/taghighlight-automirror.git'
 
 " Syntax checker
 Plugin 'https://github.com/scrooloose/syntastic.git'
@@ -208,3 +207,14 @@ let g:easytags_languages = {
 \       'recurse_flag': '-R'
 \   }
 \}
+
+" don't use easytags highlighting -> slows vim 
+let g:easytags_auto_highlight = 0
+" update tags file after save
+let g:easytags_events = ['BufWritePost']
+
+" set tags filename for taghighlight
+if ! exists('g:TagHighlightSettings')
+	let g:TagHighlightSettings = {}
+endif
+let g:TagHighlightSettings['TagFileName'] = '.tags'
