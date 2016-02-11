@@ -31,9 +31,6 @@ alias ....='cd ../../../..'
 
 export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/
 
-alias matlabgui='matlab -desktop -nosplash'
-alias matlab='matlab -nodesktop -nosplash'
-
 # Set titlebar
 case "$TERM" in
 xterm*|rxvt*)
