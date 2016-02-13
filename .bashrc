@@ -69,6 +69,7 @@ alias lsa="ls -A"
 alias lsf="ls -F"
 alias lsl="ls -l"
 alias ls='ls --color=auto'
+alias ll='ls -1'
 
 # Eternal bash history.
 # if bash starts taking long time to load file size is getting too big

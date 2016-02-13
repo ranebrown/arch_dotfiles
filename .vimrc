@@ -86,8 +86,12 @@ set laststatus=2
 " show line numbers
 set number
 
-" set tab size
-set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+" use spaces instead of tabs
+" set all tabs and indentations to a width of 4
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " set jj as key combo to exit insert mode
 imap jj <esc>
@@ -157,9 +161,6 @@ let g:airline_theme='solarized'
 
 " used to show tabs and spaces using :set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-
-" disable airline whitespace detection
-let g:airline#extensions#whitespace#enabled = 0
 
 " default autocomplete file
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
