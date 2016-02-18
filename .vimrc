@@ -96,7 +96,7 @@ set softtabstop=4
 " set jj as key combo to exit insert mode
 imap jj <esc>
 
-" set default behaviour for split window 
+" set default behaviour for split window
 set splitbelow
 set splitright
 
@@ -106,14 +106,10 @@ let g:netrw_liststyle=3
 " change leader key
 let mapleader=","
 
-" shortcuts for tabs 
+" shortcuts for tabs
 nnoremap <silent> <leader>t :tabnew<CR>
 nnoremap <silent> <leader>n :tabnext<CR>
 nnoremap <silent> <leader>p :tabprevious<CR>
-
-" Visual block remapping
-nnoremap <silent> <leader>v <C-V>
-inoremap <leader>v <esc><C-V>
 
 "switch between windows
 nnoremap <leader>l <C-w>l
@@ -181,7 +177,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0 
+let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_c_checkers = ["clang_check"]
@@ -201,21 +197,25 @@ let g:easytags_dynamic_files = 1
 " the ctags commands to use for easytags
 let g:easytags_languages = {
 \'c': {
-\	'cmd': '/usr/bin/ctags',
-\		'args': ['--fields=+l', '--c-kinds=+p'],
+\   'cmd': '/usr/bin/ctags',
+\       'args': ['--fields=+l', '--c-kinds=+p'],
 \       'fileoutput_opt': '-f',
 \       'stdout_opt': '-f-',
 \       'recurse_flag': '-R'
 \   }
 \}
 
-" don't use easytags highlighting -> slows vim 
+" don't use easytags highlighting -> slows vim
 let g:easytags_auto_highlight = 0
 " update tags file after save
 let g:easytags_events = ['BufWritePost']
 
 " set tags filename for taghighlight
 if ! exists('g:TagHighlightSettings')
-	let g:TagHighlightSettings = {}
+    let g:TagHighlightSettings = {}
 endif
 let g:TagHighlightSettings['TagFileName'] = '.tags'
+
+" copy and paste to global clipboard
+vnoremap <C-c> "+y
+nnoremap <silent> <leader>v "+p
