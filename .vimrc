@@ -12,6 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 
+" netrw enhancments
+Plugin 'https://github.com/tpope/vim-vinegar.git'
+
 " ctags highlighter
 Plugin 'https://github.com/abudden/taghighlight-automirror.git'
 
@@ -100,8 +103,11 @@ imap jj <esc>
 set splitbelow
 set splitright
 
-" set default netrw (explore) view style
+" set default netrw view style
 let g:netrw_liststyle=3
+
+" default hide dot files in netrw
+let g:netrw_list_hide= '\(^\|\s\s\)\zs\.\S\+'
 
 " change leader key
 let mapleader=","
@@ -219,3 +225,7 @@ let g:TagHighlightSettings['TagFileName'] = '.tags'
 " copy and paste to global clipboard
 vnoremap <C-c> "+y
 nnoremap <silent> <leader>v "+p
+
+" project specific settings -> tabsize 2 for pyxis
+au BufRead,BufEnter /home/rane/Documents/ClassesSprg16/IndependentStudy/pyxis/* setlocal ts=2 sts=2 sw=2
+
