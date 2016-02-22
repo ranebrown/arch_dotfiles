@@ -10,9 +10,9 @@ alias clc='clear'
 alias server='ssh brownsr@eces-shell.colorado.edu'
 
 # PS1 sets prompt
-# \u = username, \h = hostname,  \w = full working directory, 
+# \u = username, \h = hostname,  \w = full working directory,
 # \t = current time hh:mm:ss, \@ = current time am/pm, \d = date
-# \! = history number of last command, \$? = status of last command 
+# \! = history number of last command, \$? = status of last command
 # \e[ = start of foreground (text) color, x;ym = color code i.e. 0;34, \e[m = end of color
 # \e[m = start background color, can combine a background and text color at beginning -> only need one \e[m at end
 # \[ = begin sequence of non-printing characters, \] = end sequence of non-printing characters
@@ -25,9 +25,9 @@ export PS1="\[\e[36m\][\w]\[\e[m\]\n\[\e[33m\]\!\[\e[m\][\u]\[\e[1;31m\]>> \[\e[
 alias pyxis='cd /home/rane/Documents/ClassesSprg16/IndependentStudy/pyxis'
 
 alias .='cd ..'
-alias ..='cd ../..' 
-alias ...='cd ../../..' 
-alias ....='cd ../../../..' 
+alias ..='cd ../..'
+alias ...='cd ../../..'
+alias ....='cd ../../../..'
 
 export MATLAB_JAVA=/usr/lib/jvm/java-8-openjdk/jre/
 
@@ -64,11 +64,9 @@ eval `dircolors ~/.dir_colors/dircolors.ansi-dark`
 export EDITOR="/bin/vim"
 
 # ls -l command display in megabytes
-alias lsm="ls -l --block-size=M"
-alias lsa="ls -A"
-alias lsf="ls -F"
-alias lsl="ls -l"
-alias ls='ls --color=auto'
+alias lm='ls -l --block-size=M'
+alias la='ls -A'
+alias lf='ls -F'
 alias ll='ls -1'
 
 # Eternal bash history.
