@@ -104,7 +104,7 @@ set splitbelow
 set splitright
 
 " set default netrw view style
-let g:netrw_liststyle=3
+let g:netrw_liststyle=0
 
 " default hide dot files in netrw
 let g:netrw_list_hide= '\(^\|\s\s\)\zs\.\S\+'
