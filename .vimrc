@@ -17,6 +17,7 @@ Plugin 'https://github.com/tpope/vim-vinegar.git'
 
 " ctags highlighter
 Plugin 'https://github.com/abudden/taghighlight-automirror.git'
+Plugin 'https://github.com/gauravjuvekar/abudden-EasyColour.git'
 
 " Syntax checker
 Plugin 'https://github.com/scrooloose/syntastic.git'
@@ -175,6 +176,10 @@ let g:ycm_confirm_extra_conf = 0
 
 " don't use ycm's syntax checker
 let g:ycm_show_diagnostics_ui = 0
+
+" close scratch buffer after exiting insert mode
+" scratch buffer pops up for structs when completing a element of that struct
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " syntasitc settings
 set statusline+=%#warningmsg#
