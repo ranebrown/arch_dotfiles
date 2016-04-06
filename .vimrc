@@ -238,3 +238,6 @@ nnoremap <silent> <leader>v "+p
 " project specific settings -> tabsize 2 for pyxis
 au BufRead,BufEnter /home/rane/Documents/ClassesSprg16/IndependentStudy/pyxis/* setlocal ts=2 sts=2 sw=2
 
+" use bash like tab autocompletion
+set wildmode=longest,list,full
+set wildmenu
