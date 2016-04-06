@@ -87,6 +87,9 @@ colorscheme solarized
 " show status line all the time
 set laststatus=2
 
+" case insensitive seach (use \C for case sensitive)
+set ignorecase
+
 " show line numbers
 set number
 
@@ -218,6 +221,7 @@ let g:easytags_languages = {
 
 " don't use easytags highlighting -> slows vim
 let g:easytags_auto_highlight = 0
+
 " update tags file after save
 let g:easytags_events = ['BufWritePost']
 
