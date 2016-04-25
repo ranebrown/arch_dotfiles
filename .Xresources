@@ -91,7 +91,7 @@ URxvt*borderColor:            #002b36
 
 URxvt*cursorBlink:                    false
 URxvt*internalBorder:                 0
-URxvt*font:                           xft:Anonymous Pro:pixelsize=18
+URxvt*font:                           xft:Anonymous Pro:pixelsize=16
 URxvt*scrollBar:                      off
 URxvt*scrollWithBuffer:               true
 URxvt*scrollTtyOutput:                false
